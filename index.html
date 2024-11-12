@@ -9,37 +9,29 @@
 </head>
 
 <body>
-    <div class="timeline-container">
-        <!-- Les éléments de la frise -->
-        <div class="timeline-item" id="item-0">
-            <img src="https://via.placeholder.com/150" alt="Événement 1">
+    <div class="container">
+        <h1>Frise Chronologique</h1>
+        <div class="actions">
+            <button id="addItemBtn">Ajouter un événement</button>
+            <button id="toggleDeleteModeBtn">Supprimer un événement</button>
         </div>
-        <div class="timeline-item" id="item-1">
-            <img src="https://via.placeholder.com/150" alt="Événement 2">
+        <div class="timeline-container">
+            <div class="timeline" id="timeline">
+                <!-- Les éléments de la frise seront insérés dynamiquement -->
+            </div>
         </div>
-        <div class="timeline-item" id="item-2">
-            <img src="https://via.placeholder.com/150" alt="Événement 3">
-        </div>
-        <div class="timeline-item" id="item-3">
-            <img src="https://via.placeholder.com/150" alt="Événement 4">
-        </div>
-        <div class="timeline-item" id="item-4">
-            <img src="https://via.placeholder.com/150" alt="Événement 5">
-        </div>
-        <div class="timeline-item" id="item-0">
-            <img src="https://via.placeholder.com/150" alt="Événement 1">
-        </div>
-        <div class="timeline-item" id="item-1">
-            <img src="https://via.placeholder.com/150" alt="Événement 2">
-        </div>
-        <div class="timeline-item" id="item-2">
-            <img src="https://via.placeholder.com/150" alt="Événement 3">
-        </div>
-        <div class="timeline-item" id="item-3">
-            <img src="https://via.placeholder.com/150" alt="Événement 4">
-        </div>
-        <div class="timeline-item" id="item-4">
-            <img src="https://via.placeholder.com/150" alt="Événement 5">
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <h2>Modifier un événement</h2>
+                <form id="editForm">
+                    <label for="imageUrl">URL de l'image :</label>
+                    <input type="text" id="imageUrl" name="imageUrl" required>
+                    <label for="title">Titre :</label>
+                    <input type="text" id="title" name="title" required>
+                    <button type="submit">Sauvegarder</button>
+                    <button type="button" id="closeModalBtn">Annuler</button>
+                </form>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
