@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             timelineItem.classList.add('timeline-item');
             timelineItem.innerHTML = `
                 <img src="${item.imageUrl}" alt="${item.title}">
+                <p>${item.title}</p>
                 <button class="deleteBtn" data-index="${index}">X</button>
             `;
             timelineItem.addEventListener('click', () => selectItem(index));
